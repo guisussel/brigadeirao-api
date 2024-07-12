@@ -14,4 +14,9 @@ class BrigadeiroPricingController (private val service: BrigadeiroPricingService
     fun getBrigadeiroPricing(): BrigadeiroPricing {
         return service.getPricing()
     }
+
+    @GetMapping("/status")
+    fun getApiStatus(): Unit {
+        println("STATUS CHECK: OK")
+    }
 }
