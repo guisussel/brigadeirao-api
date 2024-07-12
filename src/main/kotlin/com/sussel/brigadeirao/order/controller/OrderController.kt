@@ -13,28 +13,28 @@ class OrderController(val orderService: OrderService) {
 
     @PostMapping("/order")
     fun createOrder(@RequestBody order: Order): ResponseEntity<Order> {
-        println("POST - createOrder order: $order")
+        println("OrderController - createOrder order: $order")
         return ResponseEntity(order, HttpStatus.CREATED)
     }
 
     @GetMapping("/order/status")
     fun getOrderStatus(): ResponseEntity<OrderStatus> {
         val status = orderService.getOrderStatus()
-        println("GET - getOrderStatus")
+        println("OrderController - getOrderStatus")
         return ResponseEntity.ok(status)
     }
 
     @PostMapping("/status")
     fun updateOrderStatus(@RequestBody status: OrderStatus): ResponseEntity<Void> {
         orderService.updateOrderStatus(status)
-        println("POST - updateOrderStatus")
+        println("OrderController - updateOrderStatus")
         return ResponseEntity.ok().build()
     }
 
     @PostMapping("/order/receive")
     fun receiveOrder(@RequestBody order: Order): ResponseEntity<Void> {
         orderService.receiveOrder(order)
-        println("POST - receiveOrder order: $order")
+        println("OrderController - receiveOrder order: $order")
         return ResponseEntity.ok().build()
     }
 

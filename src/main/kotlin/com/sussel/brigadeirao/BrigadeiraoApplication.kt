@@ -8,5 +8,5 @@ class BrigadeiraoApplication
 
 fun main(args: Array<String>) {
 	runApplication<BrigadeiraoApplication>(*args)
-	println("\nStarted with success!")
+	println("\nAPI started with success!")
 }

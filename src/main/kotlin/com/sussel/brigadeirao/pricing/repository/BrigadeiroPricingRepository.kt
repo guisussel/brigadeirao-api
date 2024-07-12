@@ -6,9 +6,11 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class BrigadeiroPricingRepository {
+
     fun getBrigadeiroPricing(): BrigadeiroPricing {
         val brigadeiroPricing = DecimalNumberFormatter.format(BrigadeiroPricing())
-        println("\nReturning brigadeiro pricing: $brigadeiroPricing")
+        println("BrigadeiroPricingRepository - returning brigadeiro pricing: $brigadeiroPricing")
         return brigadeiroPricing
     }
+
 }

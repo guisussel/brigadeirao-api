@@ -6,7 +6,10 @@ import org.springframework.stereotype.Service
 
 @Service
 class BrigadeiroPricingService(private val repository: BrigadeiroPricingRepository) {
+
     fun getPricing(): BrigadeiroPricing {
+        println("BrigadeiroPricingService - getPricing")
         return repository.getBrigadeiroPricing()
     }
+
 }
