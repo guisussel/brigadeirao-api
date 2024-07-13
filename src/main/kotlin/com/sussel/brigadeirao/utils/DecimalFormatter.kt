@@ -8,8 +8,8 @@ object DecimalNumberFormatter {
 
     fun format(pricing: BrigadeiroPricing): BrigadeiroPricing {
         return BrigadeiroPricing(
-            decimalFormat.format(pricing.pricePerUnit).replace(",", ".").toDouble(),
-            decimalFormat.format(pricing.sameDayPickupPrice).replace(",", ".").toDouble(),
+            decimalFormat.format(pricing.pricePerBrigadeiroUnit).replace(",", ".").toDouble(),
+            decimalFormat.format(pricing.priceForSameDayPickup).replace(",", ".").toDouble(),
         )
     }
 
